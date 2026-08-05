@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Quarto render/build output
+/.quarto/
+*_files/
+*.html
+*.pptx

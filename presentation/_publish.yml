@@ -1,4 +1,4 @@
-- source: presentation_test.qmd
+- source: palmer_penguins.qmd
   quarto-pub:
     - id: 093d655d-403a-4718-bbe0-af4174966f2d
       url: 'https://nimrodds.quarto.pub/club-penguin-palmer-penguins'

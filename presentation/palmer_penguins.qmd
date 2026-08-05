@@ -1,14 +1,14 @@
 ---
 title: Desvendando o Mundo dos Penguins com o Dataset Palmer Penguins 🐧
 title-slide-attributes:
-    data-background-image: bg_img/penguins_bg.png
+    data-background-image: images/penguins_bg.png
     data-background-size: contain
     data-background-opacity: "0.35"
 
 format: 
   revealjs:
     scrollable: true
-    logo: bg_img/tux.png
+    logo: images/tux.png
     footer: Davi Augusto, Diogo Bolzan, João Arend, Luan Frederico
     theme: [default, dd.scss]
     
@@ -31,7 +31,7 @@ library(leaflet)
 # DOCUMENTAÇÃO DO QUARTO https://quarto.org/docs/presentations/revealjs/
 
 #Carregando o Data Base Penguins:
-penguins_db <- read_csv("penguins.csv")
+penguins_db <- read_csv("../data/penguins.csv")
 
 # Header para tabelas knit do database original
 penguins_db_header <- c("Index", "Specie",
@@ -87,7 +87,7 @@ media_gentoo <- colMeans(species_separadas_gentoo[c("bill_length_mm", "bill_dept
 :::
 
 ::: {.column width="45%"}
-![](bg_img/kristen.jpg){.absolute  width="400" height="400"}
+![](images/kristen.jpg){.absolute  width="400" height="400"}
 
 :::
 :::
@@ -102,7 +102,7 @@ media_gentoo <- colMeans(species_separadas_gentoo[c("bill_length_mm", "bill_dept
 :::
 
 ::: {.column width="45%"}
-![](bg_img/madagascar.png){.absolute  width="450" height="300"}
+![](images/madagascar.png){.absolute  width="450" height="300"}
 :::
 :::
 
@@ -124,7 +124,7 @@ knitr::kable(na.omit(penguins_db)[sample(nrow(na.omit(penguins_db)), 8), 2:ncol(
 :::
 ::: {.column width="38%"}
 
-![](bg_img/var_explanation.png){.absolute  width="380" height="auto"}
+![](images/var_explanation.png){.absolute  width="380" height="auto"}
 
 :::
 :::
@@ -134,7 +134,7 @@ knitr::kable(na.omit(penguins_db)[sample(nrow(na.omit(penguins_db)), 8), 2:ncol(
 ::: columns
 ::: {.column width="33%" .fragment}
 - Adélie 
- ![](bg_img/adelie_1.jpeg){width="290" height="auto"}
+ ![](images/adelie_1.jpeg){width="290" height="auto"}
  
 ```{r}
 
@@ -146,7 +146,7 @@ knitr::kable(media_adelie,
 
 ::: {.column width="33%" .fragment}
 - Chinstrap
- ![](bg_img/chinstrap.jpeg){width="290" height="auto"}
+ ![](images/chinstrap.jpeg){width="290" height="auto"}
  
 ```{r attr.output='.incremental'}
 
@@ -159,7 +159,7 @@ knitr::kable(media_chinstrap,
 
 ::: {.column width="33%" .fragment}
 - Gentoo
- ![](bg_img/gentoo.jpeg){width="290" height="auto"}
+ ![](images/gentoo.jpeg){width="290" height="auto"}
  
 ```{r attr.output='.incremental'}
 
@@ -250,7 +250,7 @@ knitr::kable(t(species_resum[, 2:ncol(species_resum)]),
 :::
 ::: {.column width="30%"}
 
-![](bg_img/pingu.png){width="100%" height="auto"}
+![](images/pingu.png){width="100%" height="auto"}
 
 :::
 :::
@@ -393,7 +393,7 @@ ggplot(data = data.frame(x = species_separadas_adelie$flipper_length_mm), aes(x 
 
 O que é e como funciona:
 
-![](bg_img/bootimg.png){.r-stretch width="100%" height="auto"}
+![](images/bootimg.png){.r-stretch width="100%" height="auto"}
 
 ```{r, echo = FALSE, include=FALSE}
 
@@ -848,4 +848,4 @@ p_valor_bilateral >  alpha # ACEITA
 
 ## Muito obrigado pela atenção!
 
-![](bg_img/madagascar_bye.png){fig-align="center" width="900" height="auto"}
+![](images/madagascar_bye.png){fig-align="center" width="900" height="auto"}
